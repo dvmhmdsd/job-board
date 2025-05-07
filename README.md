@@ -7,7 +7,7 @@ This is the backend system for a Job Board Platform, built using **Django** and 
 
 ## 📐 Architecture Overview
 
-Refer to the high level architecture diagram in `diagrams/high level arch.drawio`
+Refer to the high level architecture diagram in [High level architecture file](./diagrams/high level arch.drawio)
 
 > To view the diagram easily, make sure to install drawio extension in your editor.
 
