@@ -1,6 +1,3 @@
-Here's a `README.md` file for your Django backend project based on the architecture shown in the draw.io diagram:
-
----
 
 # 🛠 Django REST API for Job Board Platform
 
