@@ -136,8 +136,3 @@ job_board_backend/
 └── requirements.txt
 ```
 
----
-
-## 📜 License
-
-MIT License © Your Name
