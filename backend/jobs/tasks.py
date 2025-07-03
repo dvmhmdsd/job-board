@@ -28,7 +28,7 @@ def reconcile_search_index():
     db_job_ids = set(Job.objects.values_list('id', flat=True))
     
     # Get all job IDs from the search index
-    search_job_ids = set(int(hit.meta.id) for hit in JobDocument.search().scan())
+    search_job_ids = {int(hit.meta.id) for hit in JobDocument.search().scan()}
     
     # Jobs to be indexed (in DB but not in search index)
     to_index = db_job_ids - search_job_ids
