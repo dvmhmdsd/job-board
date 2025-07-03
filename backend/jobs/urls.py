@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .views import job_search_views
 
 urlpatterns = [
     # Index endpoint
@@ -25,6 +26,7 @@ urlpatterns = [
     # Job endpoints
     path('jobs/', views.JobListView.as_view(), name='job-list'),
     path('jobs/<int:job_id>/', views.JobDetailView.as_view(), name='job-detail'),
+    path('jobs/search/', job_search_views.search_jobs, name='job-search'),
     
     # Experience endpoints
     path('experiences/<int:applicant_id>/', views.ExperienceListView.as_view(), name='experience-list'),

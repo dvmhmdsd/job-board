@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'drf_yasg',
-    'jobs'
+    'jobs',
+    'django_elasticsearch_dsl',
 ]
 
 MIDDLEWARE = [
@@ -85,6 +86,13 @@ DATABASES = {
         "PORT": "5432",
     }
 }
+
+ELASTICSEARCH_DSL = {
+    'default': {
+        'hosts': 'http://localhost:9200'
+    },
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators

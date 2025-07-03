@@ -1,4 +1,7 @@
 from django.db import models
+from django.db.models.signals import post_save, post_delete
+from django.dispatch import receiver
+from .documents import JobDocument
 
 class User(models.Model):
     email = models.EmailField(unique=True)
@@ -48,6 +51,13 @@ class Job(models.Model):
     def __str__(self):
         return self.title
 
+@receiver(post_save, sender=Job)
+def update_job_document(sender, instance, **kwargs):
+    JobDocument().update(instance)
+
+@receiver(post_delete, sender=Job)
+def delete_job_document(sender, instance, **kwargs):
+    JobDocument().update(instance, action='delete')
 
 class Experience(models.Model):
     applicant = models.ForeignKey(Applicant, on_delete=models.CASCADE, related_name="experiences")

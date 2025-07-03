@@ -6,6 +6,7 @@ from .experience_views import ExperienceListView
 from .job_application_views import JobApplicationListView, JobApplicationDetailView
 from .utility_views import JobsByCompanyView, ApplicationsByApplicantView, ExperiencesByApplicantView
 from .auth_views import RegisterView, LoginView, ProfileView
+from . import job_search_views
 
 def index(request):
     from django.http import HttpResponse
@@ -30,4 +31,5 @@ __all__ = [
     'RegisterView',
     'LoginView',
     'ProfileView',
+    'job_search_views',
 ]
