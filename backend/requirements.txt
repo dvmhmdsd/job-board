@@ -7,3 +7,4 @@ psycopg2-binary>=2.9.6
 drf-yasg>=1.21.5
 python-dotenv>=1.0.0
 pyjwt>=2.6.0
+celery[redis]>=5.4.0
